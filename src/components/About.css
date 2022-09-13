@@ -1,0 +1,15 @@
+.about-col{
+    background-color:rgba(135, 167, 136,1);
+    border-left: 20px solid rgba(72,57,34,1);
+    border-right: 20px solid rgba(72,57,34,1);
+    border-bottom: 20px solid rgba(72,57,34,1);
+}
+.about-col h1{
+  color: rgb(59, 71, 61);
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+.about-col p{
+    color: white;
+    font-size: 20px;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+}

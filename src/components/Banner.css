@@ -1,0 +1,53 @@
+
+
+.banner-col{
+    /* background-image: url(/src/images/home_logo.png);
+    background-repeat: no-repeat; */
+    background-color:rgba(135, 167, 136,1);
+    border-left: 20px solid rgba(72,57,34,1);
+    border-right: 20px solid rgba(72,57,34,1);
+}
+.banner-col img{
+        width: 170px;
+        height: 170px;    
+    
+}
+.banner-col h1{
+
+    font-family: "Edu VIC WA NT Beginner", cursive;
+color: rgba(72,57,34,1);
+font-weight: 800;
+
+}
+.banner-col p{
+
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    color: white;
+    font-weight: 500;
+    
+    }
+    .butn{
+
+        border-radius: 10px;
+        color: white;
+        padding: 8px 20px;
+        background-color: rgba(135, 167, 136,1);
+        box-shadow: black 0px 0px 5px;
+        border-color: transparent;
+    }
+
+.active, .butn:hover{
+    background-color: rgb(111, 150, 116);
+}
+/* button:nth-child(1){
+
+    background-color: rgb(111, 150, 116);
+} */
+@media (max-width: 576px){
+    .butn{
+
+      
+        padding: 4px 10px;
+        
+    }
+}
