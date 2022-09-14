@@ -1,4 +1,4 @@
-.login-container{
+.signup-container{
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -6,18 +6,21 @@
     top: 0;
     left: 0;
 }
-.login-col{
+.signup-col{
     
     background-color: rgb(98, 144, 114);
 }
 
-.login-col i{
+.signup-col i{
 
     background-color: rgb(139, 184, 136);
 
 
 } 
-.login-col button{
+.signup-col .buttons :nth-child(1) {
 
     background-color:rgb(74, 52, 21) ;
+}
+.signup-col .buttons :nth-child(2){
+    background-color: rgb(28, 58, 31);
 }

@@ -1,10 +1,14 @@
 import React from 'react';
-
 import './Banner.css';
+// import Login from './Login';
+// import { useState } from 'react';
+
+// import { Link } from 'react-router-dom';
 
 
+function banner(props) {
 
-function banner() {
+// const [isOpen, setIsOpen] = useState(false);
 
 
 
@@ -18,13 +22,18 @@ function banner() {
     <p className='text-center'>Globally scoped, locally focused. Because <br /> compassion is in our DNA.</p>
     
     <div className="buttons my-3" id='buttons'>
-    <button type='button' className='butn me-sm-4 me-3 active'>Login</button>
-    <button type='button' className='butn'>Sign Up</button>
+    {props.loginPopup}
+    {/* <button type='button' className='butn me-sm-4 me-3 active'  
+>Sign In</button> */}
+{props.signupPopup}
+    {/* <button type='button' className='butn'>Sign Up</button>
+    {props.children} */}
     </div>
     </div>
 
 </div>
 
+{/* <Login props /> */}
 
     </>
   )
