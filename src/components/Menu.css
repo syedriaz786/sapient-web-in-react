@@ -1,10 +1,14 @@
 nav{
     background-color:  rgba(72,57,34,1);
+    z-index: 2000;
+ 
 
 }
+
 .menu-col{
     border-left: 20px solid rgba(72,57,34,1);
     border-right: 20px solid rgba(72,57,34,1);
+    z-index: 1;
  
   
 }
@@ -12,8 +16,7 @@ nav{
         margin-bottom: 0rem;
         padding-left: 0rem;
 }
-
-.menu-col ul li{
+ .navitem{
     list-style: none;
     display: inline;
     /* background-color: rgba(135, 167, 136,1); */
@@ -22,30 +25,36 @@ nav{
   
 }
 
-.menu-col ul li a{
 
-    text-decoration: none;
+.navlink{
+
+    text-decoration: none !important;
     color: white;
     font-weight: 700;
-   
+    font-size: 1.1rem;
     font-family: "Edu VIC WA NT Beginner", cursive;
+ 
+    
 
 
 }
 .active{
     background-color: rgb(111, 150, 116) !important;
+
+   
+}
+.active.navitem{
+    list-style: none;
+    display: inline;
+    /* background-color: rgba(135, 167, 136,1); */
+    background-color:  rgb(61, 94, 62);
+    
+  
 }
 
 @media(max-width: 392px) {
-    .menu-col ul{
-      
-    }
-    .menu-col ul li {
-     
-    }
+
     .menu-col ul li a{
         font-size: 11px;
-        
-       
     }
 }

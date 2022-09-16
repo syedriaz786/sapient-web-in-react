@@ -6,18 +6,42 @@
     border-left: 20px solid rgba(72,57,34,1);
     border-right: 20px solid rgba(72,57,34,1);
     border-bottom: 20px solid rgba(72,57,34,1);
+    z-index: 2;
 
 }
 .mission-col h1{
   color: rgb(59, 71, 61);
   font-family: "Edu VIC WA NT Beginner", cursive;
+  font-size: 2.3rem;
+  font-weight: 700;
 }
 .mission-col p{
     color: white;
     font-size: 20px;
-    font-family: "Edu VIC WA NT Beginner", cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .mission-col p span{
     color:rgba(72,57,34,1);
+}
+
+@media(max-width: 768px){
+
+    .mission-col p{
+     
+        font-size: 1.1rem;
+
+    }
+
+}
+@media(max-width: 768px){
+
+    .mission-col p{
+     
+        font-size: .8rem;
+
+    }
+
 }

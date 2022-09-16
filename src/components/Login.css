@@ -1,14 +1,22 @@
 .login-container{
     position: absolute;
     width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.445);
+    min-height: 100vh;
+    /* min-height: 4000px; */
     top: 0;
     left: 0;
+    z-index: 9;
+
+    background-color: rgba(0, 0, 0, 0.568);
 }
 .login-col{
     
     background-color: rgb(98, 144, 114);
+    z-index: 10;
+}
+.login-col label{
+    color: rgb(171, 202, 171);
+    font-family:cursive;
 }
 
 .login-col i{

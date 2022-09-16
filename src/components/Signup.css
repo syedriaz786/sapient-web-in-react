@@ -1,14 +1,20 @@
 .signup-container{
     position: absolute;
     width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.445);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.568);
+    background-size: cover;
+
     top: 0;
     left: 0;
+    z-index: 9;
+    box-sizing: border-box;
 }
 .signup-col{
     
     background-color: rgb(98, 144, 114);
+    z-index: 10;
+    
 }
 
 .signup-col i{
@@ -17,10 +23,32 @@
 
 
 } 
+.signup-col label{
+    color: rgb(171, 202, 171) !important;
+    font-family:cursive;
+}
+
+.signup-col p{
+    color: rgb(171, 202, 171);
+    font-family:cursive;
+}
+.signup-col .buttons{
+    
+}
 .signup-col .buttons :nth-child(1) {
 
     background-color:rgb(74, 52, 21) ;
 }
 .signup-col .buttons :nth-child(2){
     background-color: rgb(28, 58, 31);
+}
+
+@media (max-width: 576px){
+  
+    .signup-col label ,
+    .signup-col p, button{
+     
+        font-size: .8rem;
+
+    }
 }

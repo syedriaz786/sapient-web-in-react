@@ -3,14 +3,39 @@
     border-left: 20px solid rgba(72,57,34,1);
     border-right: 20px solid rgba(72,57,34,1);
     border-bottom: 20px solid rgba(72,57,34,1);
+    z-index: 2;
 }
 .contact-col h1{
   color: rgb(59, 71, 61);
   font-family: "Edu VIC WA NT Beginner", cursive;
+  font-weight: 22.3rem;
+  font-weight: 700;
 }
 .contact-col p{
     color: white;
     font-size: 20px;
-    font-family: "Edu VIC WA NT Beginner", cursive;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
   
+}
+
+@media(max-width: 768px){
+
+  .contact-col p{
+   
+      font-size: 1.1rem;
+
+  }
+
+}
+@media(max-width: 768px){
+
+  .contact-col p{
+   
+      font-size: .8rem;
+
+  }
+
 }
