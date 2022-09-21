@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './Login.css'
 
 
@@ -9,7 +10,45 @@ import './Login.css'
 
 function Login(props) {
 
+    const [credentials, setCredentials] = useState({ email: "", password: "", name: "" })
+    let navigate = useNavigate();
 
+    const onChange = (e) => {
+        setCredentials({ ...credentials, [e.target.name]: e.target.value });
+
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const response = await fetch("http://localhost:5000/api/auth/login", {
+
+            method: 'POST',
+
+            headers: {
+                'Content-Type': 'application/json'
+                //   "auth-token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjMyNGNiYzI2NzY5N2U2NDExMzBkNDI4In0sImlhdCI6MTY2MzM1Nzc1NX0.gdkr-JwIghChYc0l4eR81ALGvrm8PcxfVFpKSeFi-1M"
+
+            },
+            body: JSON.stringify({ email: credentials.email, password: credentials.password, name: credentials.name }),
+
+        });
+        console.log(credentials.name)
+        const json = await response.json();
+        console.log(json);
+        if (json.success) {
+
+            // save the auth  token and redirect
+            localStorage.setItem('token', json.authtoken)
+            navigate("/profile");
+            props.loginTrigger(false);
+
+
+        }
+        else {
+            alert("invalid email or password")
+        }
+    }
 
 
 
@@ -24,14 +63,14 @@ function Login(props) {
                         </div>
                         <hr className='text-white' />
 
-                        <form action="">
-                            <label htmlFor="formGroupExampleInput" className="form-label  my-2">Username:</label>
-                            <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Enter Username" />
+                        <form onSubmit={handleSubmit}>
+                            <label htmlFor="email" className="form-label  my-2">Email:</label>
+                            <input type="text" className="form-control" id="email" name='email' placeholder="Enter Email" onChange={onChange} value={credentials.email} />
 
 
-                            <label htmlFor="formGroupExampleInput" className="form-label my-2">Password:</label>
-                            <input type="password" className="form-control" id="formGroupExampleInput" placeholder="Enter Password" />
-                            <button type='button' className=' my-3 text-white py-2 px-3 rounded border-0  '>Login</button>
+                            <label htmlFor="password" className="form-label my-2">Password:</label>
+                            <input type="password" className="form-control" placeholder="Enter Password" id="password" name='password' onChange={onChange} value={credentials.password} />
+                            <button type='submit' className=' my-3 text-white py-2 px-3 rounded border-0  '>Login</button>
                         </form>
                     </div>
                 </div>

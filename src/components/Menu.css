@@ -6,6 +6,12 @@ nav{
 }
 
 .menu-col{
+
+  
+        background-color:  rgba(72,57,34,1);
+        z-index: 2000;
+}
+.menu-col{
     border-left: 20px solid rgba(72,57,34,1);
     border-right: 20px solid rgba(72,57,34,1);
     z-index: 1;
@@ -16,20 +22,22 @@ nav{
         margin-bottom: 0rem;
         padding-left: 0rem;
 }
+
+ /*
  .navitem{
     list-style: none;
     display: inline;
     /* background-color: rgba(135, 167, 136,1); */
-    background-color:  rgb(61, 94, 62);
+ /*   background-color:  rgb(61, 94, 62);
     
   
 }
-
-
+*/
+ /*
 .navlink{
 
     text-decoration: none !important;
-    color: white;
+    color: white !important;
     font-weight: 700;
     font-size: 1.1rem;
     font-family: "Edu VIC WA NT Beginner", cursive;
@@ -46,15 +54,36 @@ nav{
 .active.navitem{
     list-style: none;
     display: inline;
-    /* background-color: rgba(135, 167, 136,1); */
+     background-color: rgba(135, 167, 136,1); 
     background-color:  rgb(61, 94, 62);
     
   
+} */
+ul li{
+    background-color:  rgb(61, 94, 62);
+}
+.link{
+    /* padding-top: 20px !important; */
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    text-decoration: none !important;
+    color: white !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background-color:  rgb(61, 94, 62);
+}
+.active{
+    background-color: rgb(111, 150, 116) !important;
 }
 
+@media(max-width: 576) {
+
+    .menu-col ul li a{
+        font-size: 14px;
+    }
+}
 @media(max-width: 392px) {
 
     .menu-col ul li a{
-        font-size: 11px;
+        font-size: 10px;
     }
 }

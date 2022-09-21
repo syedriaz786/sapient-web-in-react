@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import Banner from './components/Banner';
 import Menu from './components/Menu';
 import About from './components/About';
@@ -7,8 +7,8 @@ import Mission from './components/Mission';
 import Login from './components/Login';
 import Signup from './components/Signup';
 
+import Profile from './components/Profile';
 
-import { useState } from 'react';
 
 // import Home from './components/Home';
 
@@ -22,6 +22,30 @@ function App(props) {
 
   const [signupOpen, setSignupOpen] = useState(false)
 
+  // const [profile, setProfile] = useState(null);
+
+  // const showProfile = (message, type) => {
+  //   setProfile({
+  //     msg: message, // <-- yahan humne aik function me objext banaya hai
+  //     type: type,
+  //   });
+  //   setTimeout(() => {
+  //     setProfile(null);
+  //   }, 1500);
+  // };
+
+  // const [name, setName] = useState(null);
+
+  // const showName = (sname) => {
+  //   setName({
+
+  //     name: sname
+
+  //   })
+  // }
+  // console.log(name);
+  // const displayName = showName;
+
   const toggleLoginPopup = () => {
 
     setLoginOpen(!loginOpen)
@@ -31,6 +55,8 @@ function App(props) {
 
     setSignupOpen(!signupOpen)
   }
+
+
 
   return (
 
@@ -62,6 +88,8 @@ function App(props) {
 
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/mission" element={<Mission />} />
+
+                  <Route path="/profile" element={< Profile />} />
 
 
                 </Routes>
